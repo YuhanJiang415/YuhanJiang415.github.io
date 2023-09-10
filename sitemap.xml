@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/publications/index.html</loc>
+    <loc>http://example.com/2020/04/30/Simulation-model-of-grassland-desertification-based-on-Markov-chain/</loc>
     
-    <lastmod>2023-09-09</lastmod>
+    <lastmod>2023-09-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://example.com/2020/08/24/%E5%93%81%E8%88%8C%E5%B0%96%E7%BE%8E%E9%A3%9F%EF%BC%8C%E6%84%9F%E4%B8%AD%E5%9B%BD%E5%9C%B0%E7%90%86%E5%B9%B3%E5%8F%B0/</loc>
     
-    <lastmod>2023-09-09</lastmod>
+    <lastmod>2023-09-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,16 +22,52 @@
   <url>
     <loc>http://example.com/research/index.html</loc>
     
-    <lastmod>2023-09-09</lastmod>
+    <lastmod>2023-09-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/2023/09/03/hello-world/</loc>
+    <loc>http://example.com/2021/10/21/Spatial-analysis-of-COVID-19/</loc>
     
-    <lastmod>2023-09-03</lastmod>
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/10/10/Robot-indoor-positioning/</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/09/10/Map-retrieval-intention-recognition/</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/index.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/publications/index.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +76,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-09-09</lastmod>
+    <lastmod>2023-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
