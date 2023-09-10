@@ -1,9 +1,9 @@
+http://example.com/about/index.html
 http://example.com/2020/04/30/Simulation-model-of-grassland-desertification-based-on-Markov-chain/
 http://example.com/2020/08/24/%E5%93%81%E8%88%8C%E5%B0%96%E7%BE%8E%E9%A3%9F%EF%BC%8C%E6%84%9F%E4%B8%AD%E5%9B%BD%E5%9C%B0%E7%90%86%E5%B9%B3%E5%8F%B0/
 http://example.com/research/index.html
 http://example.com/2021/10/21/Spatial-analysis-of-COVID-19/
 http://example.com/2021/10/10/Robot-indoor-positioning/
 http://example.com/2023/09/10/Map-retrieval-intention-recognition/
-http://example.com/about/index.html
 http://example.com/publications/index.html
 http://example.com/
