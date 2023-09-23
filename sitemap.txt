@@ -1,6 +1,6 @@
+http://example.com/about/index.html
 http://example.com/publications/index.html
 http://example.com/research/index.html
-http://example.com/about/index.html
 http://example.com/2021/10/21/Spatial-analysis-of-COVID-19/
 http://example.com/2023/09/10/Map-retrieval-intention-recognition/
 http://example.com/
