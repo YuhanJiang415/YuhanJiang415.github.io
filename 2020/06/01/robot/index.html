@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Yuhan JIANG">
+    
+    <title>
+        
+            Robot Indoor Localization |
+        
+        Yuhan JIANG
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/rabit.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+        
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+            
+        
+            
+                
+<link rel="stylesheet" href="/css/leaflet.css">
+
+            
+        
+    
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#FD7272","logo":"/images/logo.jpg","favicon":"/images/rabit.png","avatar":"/images/portrait_post.jpg","first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/background.jpg","description":"Stop wishing, start doing || Welcoming!","hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":true,"img_align":"center"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.7.6"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.jpg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Yuhan JIANG
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/publications"
+                            >
+                                PUBLICATIONS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/research"
+                            >
+                                RESEARCH
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/publications">PUBLICATIONS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/research">RESEARCH</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Robot Indoor Localization
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/portrait_post.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Yuhan JIANG</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2020-06-01 19:28:32</span>
+                <span class="mobile">2020-06-01 19:28</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Wed Nov 01 2023 20:29:36 GMT+0800">2023-11-01 20:29:36</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                            <li class="category-item">
+                                
+                                <a href="/categories/Project/">Project</a>
+                            </li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/SLAM/">SLAM</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/RGB-D/">RGB-D</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p style="text-align:justify">The subject propose an RGB-D high-precision SLAM method integrating visual and geometric features to achieve the large-scale and high-precision indoor 3D detection of robots with RGB-D sensors. <a href = 'PDF.pdf'> [Cerf.]</a> <a href = "PPT.pptx"> [PPT]</a></p>
+
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>This project proposes that the RGB-D high-precision SLAM method integrating visual and geometric features. Based on the high-precision sensor and depth data correction model, we use a camera tracking algorithm combined with visual point features and geometric line features to obtain high-precision camera trajectories. Through multi-type closed-loop detection scheme to improve the accuracy and stability of closed-loop detection, a “global optimization model” based on graph optimization is constructed to realize large-scale high-precision indoor three-dimensional detection of robots equipped with RGB-D sensors. This method improves the accuracy of RGB-D sensor SLAM from three aspects. Firstly, in the depth data correction, the working principle of RGB-D sensor is deeply explored, and the depth data acquisition model is obtained. The original grating error of the depth camera is modeled, thereby improving the accuracy of the depth data and expanding the effective measurement distance of the RGB-D sensor. Secondly, in the camera tracking method, it is not limited to adopting a single visual feature, and the method of joint optimization of visual features and line surface geometric features is adopted to improve the tracking precision and stability of the sensor. Finally, for the error accumulation problem, multi-type closed-loop detection schemes are adopted, including visual features based on camera position and interactive closed-loop detection to improve the accuracy of closed-loop detection and construct a “global optimization model” based on graph optimization</p>
+<h1 id="融合图像与几何特征的机器人室内定位与三维感知"><a href="#融合图像与几何特征的机器人室内定位与三维感知" class="headerlink" title="融合图像与几何特征的机器人室内定位与三维感知"></a>融合图像与几何特征的机器人室内定位与三维感知</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本课题提出，集成视觉与几何特征的RGB-D高精度SLAM方法，在高精度传感器和深度数据校正模型基础上，采用视觉点特征与几何线面特征联合的相机追踪算法，获取高精度相机轨迹，通过多类型闭环检测方案提高闭环检测准确度及稳定性，构建基于图优化的“全局优化模型”，实现搭载RGB-D传感器的机器人大范围高精度室内三维探测。该方法从三方面提高RGB-D传感器SLAM精度，首先在深度数据校正中，深入挖掘RGB-D传感器工作原理，获取其深度数据获取模型，对深度相机原始光栅误差进行建模，进而提高深度数据精度，扩大RGB-D传感器有效量测距离。其次在相机追踪方法上，不局限于采用单一视觉特征，采用视觉特征与线面几何特征联合优化的方法，提高传感器追踪精度及稳定性。最后，针对误差累积问题，采用多类型闭环检测方案，包括基于视觉特征、基于相机位置、交互式的闭环检测，提高闭环检测准确性，构建基于图优化的“全局优化模型”。</p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="1-1研究背景"><a href="#1-1研究背景" class="headerlink" title="1.1	研究背景"></a>1.1	研究背景</h3><p>据美国环保署一项为期5年的跟踪调查研究发现，人的一生有70%以上的时间是在室内度过的。除了在家中生活，人们的交流、休闲、消费等活动主要集中在大型商超、会议中心、酒店、机场、车站等室内空间，这些室内空间存在大量服务型机器人，为了使机器人完成各种特定的室内任务，需要利用机器人搭载的环境探测传感器实现室内机器人的自主定位与三维感知。而传统的二维地图已经难以满足这些复杂的室内应用，精细的室内三维空间信息探测技术成为支撑机器人室内自主定位与三维感知等应用的重要技术手段[1, 2]。<br>目前，常用的室内场景三维探测手段主要有激光扫描（Terrestrial Laser Scanning）和基于视觉图像序列的三维重建技术。激光扫描技术进行室内三维感知时需提前设置拍摄点和标靶，在复杂室内环境中容易出现场景细节丢失，数据采集不完整的问题，同时激光扫描设备价格昂贵，难以得到普及。基于视觉图像序列的三维重建技术可通过数码相机拍摄的二维图像序列来恢复室内三维场景，其丰富的视觉信息可很好的增强闭环检测。然而该方法建模时间长，而且在室内昏暗环境或者纹理匮乏区域工作不稳定。因此发展一种能够快速响应环境变化，便携性高，数据处理工序简单，高精度实时的室内三维感知的方法，具有重要实用意义。近年来，融合图像和几何特征的RGB-D传感器，如Kinect V1，和Structure Sensor等， 在室内即时定位与地图构建应用上被广泛使用。该类传感器与传统激光测图原理不同，基于结构光实现距离量测。其硬件由激光投射器，光学衍射元件（DOE）和红外摄像头三大核心器件组成，激光投射器发射后先通过DOE扩散为随机光斑，然后复制成多份投射到被摄物体上，深度信息可通过发射的红外光斑与反射的红外光斑强度差解算出来，可以每秒30帧的速率同步输出640*480的深度和视觉图像，有效距离在0.5m-5m左右，经过数据校正之后可达7m的量测距离。该类设备具有距离信息实时获取，便携性强，价格低廉等优点，适合机器人室内环境下的实时自主定位与三维感知[3]。</p>
+<h3 id="1-2研究意义"><a href="#1-2研究意义" class="headerlink" title="1.2	研究意义"></a>1.2	研究意义</h3><p>随着计算机视觉和人工智能的发展，机器人已经开始代替人类执行大量的工作，尤其是在具有高自动化需求的室内机器人应用中更是得到了很大的拓展。目前室内机器人最成功的应用领域是汽车制造业[4]，除传统的焊接应用外,室内机器人在机床上下料、物料搬运码垛、打磨、喷涂、装配等领域也得到了广泛应用。另外在电子产品制造、食品加工、医疗卫生等各个行业[5]，室内机器人也承担着越来越重要的任务。同时，随着智能服务业的快速兴起，室内机器人己经开始服务于我们生活的多个方面，如扫地机器人、智能管家机器人、娱乐机器人等[10]。在人工智能方兴未艾的今天，室内智能机器人的应用场景相信会更加广泛。<br>室内智能机器人如若在复杂未知的环境中进行探测，其自主定位与三维感知的能力必不可少，如何根据周围环境的信息进行自身定位，如何避开场景障碍物，引导机器人安全行驶，这是室内机器人首要解决的问题。在已知环境下的机器人室内自主定位和三维感知目前已经有了较好地研究进展，然而由于室内环境容易变化和频繁人流的干扰，这就要求室内智能机器人必须利用自身的传感器动态解决未知环境下的自主定位和三维感知问题。SLAM技术（Simultaneous Localization and Mapping，同时定位与构图）的产生，为室内智能机器人实时计算自身的位置和姿态，感知周围环境信息，并合理规划自身的运动路径提供了技术基础。因此，本项目以摄影测量和计算机视觉技术为基础，利用RGB-D传感器能同时获取室内空间环境几何与图像信息的优点，提出了一种融合图像与几何特征的机器人室内自主定位与三维感知的方法，大大提高机器人对室内三维环境的感知能力与定位精度。</p>
+<h3 id="1-3研究方法"><a href="#1-3研究方法" class="headerlink" title="1.3	研究方法"></a>1.3	研究方法</h3><p>本课题的总体技术路线按照RGB-D三维探测流程分为RGB-D传感器校正、RGB-D SLAM前端，以及RGB-D SLAM后端三个阶段，具体请参考图1。</p>
+<br>
+<img  
+                     lazyload
+                     alt="image"
+                     data-src="Figure1.jpg"
+                      class="rounded mx-auto d-block" alt="..."
+                >
+<center>
+     图1 技术路线<br>
+     Figure.1 Technology Route
+</center>
+<br>
+
+<!--center> 
+  <div class="card">
+   <img  
+                     lazyload
+                     alt="image"
+                     data-src="Figure1.jpg"
+                      class="card-img-top" alt="..."
+                >
+   <div class="card-body">
+     图1 技术路线<br>
+     Figure.1 Technology Route
+  </div>
+   </div>
+</center-->
+
+<ol>
+<li><p>RGB-D传感器校正<br>RGB-D高精度传感器校正是RGB-D传感器用于室内高精度三维探测的基础，因此采用RGB-D传感器进行室内三维探测前需首先对其进行校正。校正内容分为两个部分，第一部分是传感器内外参数校正，可获取视觉与深度传感器内外参数及两传感器间的相对变换关系，第二部分是深度数据校正，通过等距离采集标靶数据，对不同距离下的深度数据构建误差模型，获取经过校正后的深度图像。</p>
+</li>
+<li><p>RGB-D SLAM 前端<br>在传感器校正的基础上，可获取视觉与深度传感器内外参数，逐像素匹配的视觉与深度图像序列及经过深度校正后的深度图像序列作为RGB-D SLAM前端输入。RGB-D SLAM前端包括三个部分，分别是特征检测和匹配、关键帧检测、相机追踪。特征检测和匹配采用SiftGPU获取视觉特征匹配点，通过平面分割获取面要素，进而通过面要素相交提取线性特征，其中线状要素和面状要素匹配是本节研究重点。关键帧检测可有效剔除低质量数据帧，降低数据冗余问题，拟采用图像模糊度、特征点匹配率约束及基线约束实现关键数据帧筛选。相机追踪方面，将联合特征点要素，线要素构建联合优化模型，实现数据帧融合。</p>
+</li>
+<li><p>RGB-D SLAM 后端<br>在前两步骤的基础上，可获取到相机轨迹，相邻数据帧间变换关系以及特征检测结果，将作为RGB-D SLAM后端处理输入。RBG-D SLAM 后端包括两部分内容，第一部分为闭环检测，本课题拟采用多类型方法进行联合闭环检测，包括基于视觉信息的、基于相机几何信息的，以及基于人机交互信息的闭环检测方案，以此避免单一闭环检测缺陷，提高闭环检测成功率及稳定性。全局优化方面，在闭环检测以及相机追踪的基础上，构建相机轨迹优化图模型，考虑到加入的闭环约束精度不同，对不同精度的闭环赋予不同的权重，调整其在优化模型中的贡献，最后通过迭代优化整体相机姿态信息，将闭环误差降低到最小。<br>本项目以基于室内机器人的RGB-D相机为研究对象，针对RGB-D传感器SLAM过程中有效量测距离短、连续定位精准不足等关键问题，在现有的SLAM框架基础上，分别从RGB-D传感器校正及3D SLAM两方面提升RGB-D传感器室内三维探测精度从而实现机器人的高精度自主定位与三维感知。因此，本课题的研究内容可划分为以下内容:</p>
+<ol>
+<li><p>RGB-D传感器高精度校正方法<br>高精度传感器校正是RGB-D传感器用于高精度三维探测的基础。在视觉传感器与深度传感器内外参数校正方面，数据采集上将采用遮挡红外发射器的方式同步采集视觉相机彩色图像及深度相机IR波段图像，通过融合控制点的方式采用针孔模型构建视觉传感器与深度传感器联合校正模型，最后通过最小二乘方式实现两传感器的联合校正；在深度数据误差校正方面，本项目拟从深度传感器硬件构造入手，分析深度数据误差来源，一方面采用深度真值优化传感器系统参数，另一方面在前者的基础上，针对原始光栅差误差构建深度数据误差模型，通过最小二乘方法获取深度数据误差模型参数。因此，RGB-D传感器高精度校正包括以下内容：</p>
+<ol>
+<li>RGB-D视觉与深度传感器内外参联合校正；</li>
+<li>RGB-D深度数据误差校正。</li>
+</ol>
+</li>
+<li><p>3D SLAM中集成视觉特征与几何特征优化方法<br>RGB-D传感器在长时间相机追踪的过程当中容易产生误差累积，因此实现高精度的相机追踪是采用RGB-D传感器进行室内探测的重要保证。本项目拟从3D SLAM中相机追踪，闭环检测和全局优化三个步骤来对现有的RGB-D 3D SLAM方法进行优化。相机追踪方面，不局限于采用单一视觉特征，充分利用传感器同步输出视觉和深度图像特点，采用视觉特征与线面几何特征联合优化的方法，提高传感器追踪精度及稳定性。闭环检测方面，采用多类型闭环检测方案，包括基于视觉信息，相机姿态约束和知识约束三种闭环检测方案，有效避免闭环丢失或检测错误等问题。全局优化方面，本项目拟采用边界权重的图优化算法，考虑到相机追踪产生的随机误差，对不同类型的闭环约束赋予不同的权重，优化图优化模型，提高算法收敛度，有效降低累积误差。因此集成视觉与几何特征的RGB-D传感器3D SLAM方法包括以下内容：</p>
+<ol>
+<li>集成视觉与几何特征的相机追踪方法；</li>
+<li>多类型闭环检测方法；</li>
+<li>边界权重的图优化方法。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+                </div>
+
+                
+                    <div class="post-copyright-info">
+                        <div class="article-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="post-title border-box text-ellipsis">
+                Robot Indoor Localization
+            </div>
+
+            <div class="post-link border-box text-ellipsis">
+                2020/06/01/robot/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="post-author bottom-item">
+                <div class="type">
+                    Author
+                </div>
+                <div class="content">Yuhan JIANG</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    Published
+                </div>
+                <div class="content">2020-06-01 19:28</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    License
+                </div>
+                <div class="content tooltip" data-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                    </div>
+                
+
+                
+                    <ul class="post-tags-box">
+                        
+                            <li class="tag-item">
+                                <a href="/tags/SLAM/"><i class="icon fas fa-hashtag"></i>SLAM</a>&nbsp;
+                            </li>
+                        
+                            <li class="tag-item">
+                                <a href="/tags/RGB-D/"><i class="icon fas fa-hashtag"></i>RGB-D</a>&nbsp;
+                            </li>
+                        
+                    </ul>
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2023/08/26/Welcome-to-use-Hexo-Theme-Keep/"
+                                   title="Hexo Theme Keep"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hexo Theme Keep</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2019/11/11/Chinese-Food-and-Geography-Platform/"
+                                   title="Chinese Food and Geography Platform"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Chinese Food and Geography Platform</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9E%8D%E5%90%88%E5%9B%BE%E5%83%8F%E4%B8%8E%E5%87%A0%E4%BD%95%E7%89%B9%E5%BE%81%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D%E4%B8%8E%E4%B8%89%E7%BB%B4%E6%84%9F%E7%9F%A5"><span class="nav-text">融合图像与几何特征的机器人室内定位与三维感知</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">1.1	研究背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E7%A0%94%E7%A9%B6%E6%84%8F%E4%B9%89"><span class="nav-text">1.2	研究意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95"><span class="nav-text">1.3	研究方法</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Yuhan JIANG</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9E%8D%E5%90%88%E5%9B%BE%E5%83%8F%E4%B8%8E%E5%87%A0%E4%BD%95%E7%89%B9%E5%BE%81%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AE%A4%E5%86%85%E5%AE%9A%E4%BD%8D%E4%B8%8E%E4%B8%89%E7%BB%B4%E6%84%9F%E7%9F%A5"><span class="nav-text">融合图像与几何特征的机器人室内定位与三维感知</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">1.1	研究背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E7%A0%94%E7%A9%B6%E6%84%8F%E4%B9%89"><span class="nav-text">1.2	研究意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95"><span class="nav-text">1.3	研究方法</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+    
+    
+</div>
+
+
+
+
+    
+        
+    
+        
+            
+<script src="/js/jquery-3.0.0.slim.min.js"></script>
+
+        
+    
+        
+            
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+        
+    
+        
+            
+<script src="/js/leaflet.js"></script>
+
+        
+    
+
+</body>
+</html>
