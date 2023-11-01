@@ -8,9 +8,9 @@ http://example.com/
 http://example.com/tags/Geo-visualization/
 http://example.com/tags/Bootstrap/
 http://example.com/tags/Springboot/
-http://example.com/tags/SLAM/
-http://example.com/tags/RGB-D/
 http://example.com/tags/Hexo/
 http://example.com/tags/Keep/
+http://example.com/tags/SLAM/
+http://example.com/tags/RGB-D/
 http://example.com/categories/Project/
 http://example.com/categories/Hexo/
