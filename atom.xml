@@ -41,6 +41,34 @@
   </entry>
   
   <entry>
+    <title>COVID-19 Visualization Platform</title>
+    <link href="http://example.com/2020/06/19/COVID19-Visualization/"/>
+    <id>http://example.com/2020/06/19/COVID19-Visualization/</id>
+    <published>2020-06-19T14:07:05.000Z</published>
+    <updated>2023-11-02T04:50:03.550Z</updated>
+    
+    <content type="html"><![CDATA[<p>In 2019, the emergence of the COVID-19 in Wuhan, China went largely unnoticed. As students specializing in Geographic Information Science, we employ spatial analysis theories and WebGIS technologies to offer geo-visualization, spatial analysis, and map services for the prevention and control of the COVID-19. <a href = 'https://github.com/YuhanJiang415/COVID19-Visualization-Platform'> [Code]</a></p><h1 id="涉疫地点自动提取的服务与分析平台"><a href="#涉疫地点自动提取的服务与分析平台" class="headerlink" title="涉疫地点自动提取的服务与分析平台"></a>涉疫地点自动提取的服务与分析平台</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在本次疫情防控中，各行各业都为之奉献出行业的力量，作为地理信息专业的学生们，就此机会，通过空间分析理论与方法和WebGIS技术对新冠肺炎疫情防控提供一些可视化表达与分析，并整合各种分析与可视化功能构建了用于新冠疫情分析的系统。系统分为四层体系结构，首先是数据层，系统从网页和新闻等信息资源处利用python网络爬虫技术获得数据，并进行初步的清洗。然后是存储层，将获取的数据利用Navicat for MySQL存入MySQL数据库中。其次是分析层，使用Intellij IDEA平台结合WebGIS技术开发web应用，实现态势地图、词云、统计图表等多类数据可视化分析和相关性分析、时空数据分析、缓冲区分析等空间分析技术与查询服务。最后在用户层，由系统管理员管理系统，由用户使用服务，了解疫情的情况。</p><h2 id="数据及研究区"><a href="#数据及研究区" class="headerlink" title="数据及研究区"></a>数据及研究区</h2><ol><li>使用到的数据有：全国各城市城内出行强度（数据来自：百度地图迁徙大数据平台 时间范围：2019&#x2F;01&#x2F;12-2019&#x2F;03&#x2F;28、2020&#x2F;01&#x2F;01&#x2F;-2020&#x2F;03&#x2F;31）；全国&#x2F;湖北省&#x2F;武汉市迁出目的地数据（同上）；全国&#x2F;湖北省&#x2F;武汉市迁入来源地数据（同上）；武汉部分类别POI数据（数据来自：百度地图 获取时间：2020&#x2F;4&#x2F;9）；新冠肺炎求助帖数据（数据来自：新浪微博 时间范围：2020&#x2F;02&#x2F;03-2020&#x2F;03&#x2F;06）；疫情日报数据（数据来自：新浪新闻疫情 时间范围：2020&#x2F;02&#x2F;05-2020&#x2F;03&#x2F;30）；武汉市行政边界；全球新冠肺炎数据（数据来自：国家卫健委及WHO官网 时间范围：2020&#x2F;01&#x2F;16&#x2F;-2020&#x2F;03&#x2F;31）；武汉市内医院床位数据；世界行政区划图；中国援助国地点及时间（数据来自：中国外交部官网 时间范围：2020&#x2F;03&#x2F;12-2020&#x2F;04&#x2F;16）</li><li>研究区：主要研究区域为全国，全球和小尺度的分析研究作为辅助。</li></ol><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol><li>使用Python爬虫技术获取数据，使用MySQL数据库清洗和管理数据。</li><li>前端使用Bootstrap框架，后端使用Springboot框架，作为平台开发的基础。</li><li>基于html+css+javascript的Web开发技术技术，利用jQuery、Echarts、Mapbox等js包在前端进行数据分析与可视化。</li><li>后端服务器继承Jpa的方法，从数据库中读取数据并进行简单的分类累加、缓冲区计算。</li><li>使用Arcgis、Arcgis Online、RStudio、Geoda等软件对数据进行空间相关性分析、探索性分析、相关性分析和叠置分析。</li><li>借助百度API添加底图及操控件、进行智能搜索、标记点数据标记和生成缓冲区，实现地图分析功能。</li></ol><div id="WMS_H" class="carousel slide" data-ride="carousel">  <div class="carousel-inner" style="height: 400px; background-color: #f1f2f6;">    <div class="carousel-item active h-100 overflow-auto">      <img                       lazyload                     alt="image"                     data-src="Figure1.png"                      class="rounded mx-auto d-block" alt="..."                >          <p style="text-align:center; margin:10px">          图1. 系统架构图 <br>        </p>    </div>      <div class="carousel-item h-100 overflow-auto">      <img                       lazyload                     alt="image"                     data-src="Figure2.jpg"                      class="rounded mx-auto d-block" alt="..."                >        <p style="text-align:center; margin:10px">        图2. 开发设计流程图 <br>      </p>    </div>    <div class="carousel-item h-100 overflow-auto">      <img                       lazyload                     alt="image"                     data-src="Figure3.png"                      class="rounded mx-auto d-block" alt="..."                >        <p style="text-align:center; margin:10px">        图3. 功能组成概述图 <br>      </p>    </div>    <div class="carousel-item h-100 overflow-auto">      <img                       lazyload                     alt="image"                     data-src="Figure4.jpg"                      class="rounded mx-auto d-block" alt="..."                >        <p style="text-align:center; margin:10px">        图4. 数据获取模型 <br>      </p>    </div>  </div>  <button class="carousel-control-prev btn-light" type="button" data-target="#WMS_H" data-slide="prev">    <span class="carousel-control-prev-icon" aria-hidden="true"></span>    <span class="sr-only">Previous</span>  </button>  <button class="carousel-control-next btn-light" type="button" data-target="#WMS_H" data-slide="next">    <span class="carousel-control-next-icon" aria-hidden="true"></span>    <span class="sr-only">Next</span>  </button></div><p>&nbsp;</p><h2 id="功能预览"><a href="#功能预览" class="headerlink" title="功能预览"></a>功能预览</h2><div class="embed-responsive embed-responsive-16by9">  <iframe class="embed-responsive-item" src="COVID19.mp4" allowfullscreen></iframe></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;In 2019, the emergence of the COVID-19 in Wuhan, China went largely unnoticed. As students specializing in Geographic Information Science</summary>
+      
+    
+    
+    
+    <category term="Project" scheme="http://example.com/categories/Project/"/>
+    
+    
+    <category term="Geo-visualization" scheme="http://example.com/tags/Geo-visualization/"/>
+    
+    <category term="Bootstrap" scheme="http://example.com/tags/Bootstrap/"/>
+    
+    <category term="Springboot" scheme="http://example.com/tags/Springboot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Robot Indoor Localization</title>
     <link href="http://example.com/2020/06/01/robot/"/>
     <id>http://example.com/2020/06/01/robot/</id>
