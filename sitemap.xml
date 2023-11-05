@@ -4,7 +4,25 @@
   <url>
     <loc>http://example.com/about/index.html</loc>
     
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/research/index.html</loc>
+    
+    <lastmod>2023-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/achievements/index.html</loc>
+    
+    <lastmod>2023-11-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -38,24 +56,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/research/index.html</loc>
-    
-    <lastmod>2023-11-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/publications/index.html</loc>
-    
-    <lastmod>2023-10-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2023/08/26/Welcome-to-use-Hexo-Theme-Keep/</loc>
     
     <lastmod>2023-09-26</lastmod>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,49 +75,49 @@
   
   <url>
     <loc>http://example.com/tags/Geo-visualization/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Bootstrap/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Springboot/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Keep/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/SLAM/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/RGB-D/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -126,14 +126,14 @@
   
   <url>
     <loc>http://example.com/categories/Project/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Hexo/</loc>
-    <lastmod>2023-11-02</lastmod>
+    <lastmod>2023-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
